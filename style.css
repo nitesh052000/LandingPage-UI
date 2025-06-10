@@ -1,0 +1,343 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'poppins', sans-serif;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 30px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 6px;
+    border-bottom: 3px solid grey;
+}
+
+.logo-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+}
+
+.logo{
+    display: flex;
+    gap: 6px;
+    font-size: x-small;
+    justify-content: center;
+    align-items: center;
+}
+.img-logo{
+    width: 20px;
+    height: 20px;
+}
+
+.main-nav a {
+    margin-right: 1.5rem;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+
+.signup {
+    display: flex;
+    text-decoration: none;
+    color: #fff;
+    gap: 10px;
+    font-weight: 600; }
+
+    .signup-logo{
+       width: 20px;
+       height: 20px;
+       color: white;
+    }
+.signup h1{
+  font-size: medium;
+}
+
+nav a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    margin-top: 50px;
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+
+.solution{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.solution h1{
+    font-size: small;
+}
+
+
+.team-icons {
+    position: relative;
+    display: flex;
+    border-radius: 20px;
+    text-align: center;
+    overflow: visible;
+}
+
+.team-icons img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid white;
+    position: relative;
+    margin-left: -15px;
+    /* ✅ overlap previous image */
+    z-index: 1;
+}
+.team-icons h1{
+    margin-bottom: 5px;
+    margin-right: 15px;
+}
+/* ensure first image doesn't shift */
+.team-icons img:first-child {
+    margin-left: 0;
+    z-index: 3;
+}
+
+.team-icons img:nth-child(2) {
+    z-index: 2;
+}
+
+.team-icons img:nth-child(3) {
+    z-index: 1;
+}
+
+.team-icons h1 {
+    margin-top: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}
+
+
+.approach {
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.hero-image {
+    width: 400px;
+    /* increase width */
+    height: 340px;
+    /* set a fixed height */
+    background-color: #c9a0dc;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    /* crop image overflow */
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* ensures image fills the div */
+    border-radius: 0;
+    /* prevent internal rounding if not needed */
+}
+
+.book-call {
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background: #fff;
+    color: #000;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.book-call:hover {
+    background: #eee;
+}
+
+.demo-button {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    padding: 12px 20px;
+    background-color: transparent;
+    border: solid black;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    width: 90%;
+    justify-content: space-between;
+}
+
+.demo-button:hover {
+    background-color: #eee; }
+
+.btn{
+    border-radius: 100%;
+    height: 30px;
+    width: 30px;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Media query for responsiveness of the hero section */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero-text,
+    .hero-image {
+        max-width: 100%;
+    }
+}
+
+.bottom-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 100px;
+    flex-wrap: wrap;
+    background-color: #000;
+    /* match background */
+}
+
+.tags {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.tags button {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tags button:hover {
+    background-color: white;
+    color: black;
+}
+
+.card-section {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 220px;
+    height: 180px;
+    border-radius: 12px;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    color: black;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    overflow: visible;
+    z-index: 0;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    right: 3px;
+    width: 60%;
+    height: 50%;
+   
+    /* soft background accent */
+    border-radius: 20px;
+    z-index: 0;
+    /* behind the content */
+    transform: rotate(8deg); }
+
+        /* 🔶 Orange card shape */
+        .card-orange::before {
+            background-color: #ff5c00;
+            /* lighter orange */
+        }
+    
+        /* ⚪ Gray card shape */
+        .card-gray::before {
+            background-color: #f2f2f2;
+            /* lighter gray */
+        }
+    
+        /* 🟡 Yellow card shape */
+        .card-yellow::before {
+            background-color: #ffd54f;
+            /* lighter yellow */ }
+
+.card-orange {
+    background-color: #ff5c00;
+    color: white;
+}
+
+.card-gray {
+    background-color: #f2f2f2;
+}
+
+.card-yellow {
+    background-color: #ffd54f;
+}
+
+.card h3,
+.icon,
+.arrow,
+.stats {
+    position: relative;
+    z-index: 1;
+}
